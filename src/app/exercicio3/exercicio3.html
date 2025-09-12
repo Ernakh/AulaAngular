@@ -1,0 +1,27 @@
+<h2>Exercício 3 - Quiz</h2>
+
+@for (q of questoes; track $index; let i = $index) {
+  <div style="margin-bottom:1rem">
+    <p><strong>{{ i + 1 }}.</strong> {{ q.enunciado }}</p>
+
+    @for (op of q.opcoes; track $index; let j = $index) {
+      <label style="display:block">
+        <input type="radio" [value]="j" name="q{{ i }}" [(ngModel)]="q.marcada" />
+        {{ op }}
+      </label>
+    }
+
+    @if (q.marcada !== undefined) {
+      <small>
+        @if (q.marcada === q.correta) { <span style="color:green">Correto!</span> }
+        @else { <span style="color:red">Errado.</span> }
+      </small>
+    }
+  </div>
+}
+
+<hr>
+
+@if (finalizado()) {
+  <p><strong>Pontuação:</strong> {{ getPontuacao() }} / {{ questoes.length }}</p>
+}

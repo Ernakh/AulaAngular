@@ -1,0 +1,21 @@
+<h2>Exercício 7</h2>
+
+<input placeholder="Filtrar por nome..." [(ngModel)]="filtro" />
+<button (click)="ordenarPor('nome')">Ordenar por Nome</button>
+<button (click)="ordenarPor('idade')">Ordenar por Idade</button>
+
+<table border="1" cellpadding="6">
+  <thead>
+    <tr><th>Nome</th><th>Idade</th><th>Cidade</th></tr>
+  </thead>
+  <tbody>
+    @for (p of exibicao; track $index) {
+      <tr>
+        <td>{{ p.nome }}</td>
+        <td>{{ p.idade }}</td>
+        <td>{{ p.cidade }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+<hr />

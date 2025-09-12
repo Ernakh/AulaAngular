@@ -1,0 +1,10 @@
+<h2>Exercício 5</h2>
+
+@if (!logado) {
+  <input placeholder="Email" [(ngModel)]="email" />
+  <input type="password" placeholder="Senha (≥4)" [(ngModel)]="senha" />
+  <button (click)="login()" [disabled]="!valido()">Login</button>
+} @else {
+  <p>Bem-vindo, <strong>{{ email }}</strong>!</p>
+}
+<hr />

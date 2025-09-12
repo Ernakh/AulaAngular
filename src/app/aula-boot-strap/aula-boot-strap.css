@@ -1,0 +1,36 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
+/* Bordas arredondadas e sombra suave */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito de hover no card */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem em círculo */
+.card-img-top {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 1rem auto 0 auto;
+  border: 3px solid #0d6efd; /* azul padrão do Bootstrap */
+}
+
+/* Centralizar texto */
+.card-body {
+  text-align: center;
+}
+
+/* Botão de seguir mais destacado */
+.btn-primary {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}

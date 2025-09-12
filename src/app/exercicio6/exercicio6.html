@@ -1,0 +1,26 @@
+<h2>Exercício 6</h2>
+
+<h3>Produtos</h3>
+<ul>
+  @for (p of produtos; track p.id) {
+    <li>
+      {{ p.nome }} — {{ p.preco }}
+      <button (click)="add(p)">Adicionar ao carrinho</button>
+    </li>
+  }
+</ul>
+
+<h3>Carrinho</h3>
+@for (i of carrinho; track i.prod.id) {
+  <ul>
+    <li>
+      {{ i.prod.nome }} (x{{ i.qtd }}) — {{ (i.qtd * i.prod.preco) }}
+      <button (click)="remover(i.prod)">remover 1</button>
+    </li>
+  </ul>
+} @empty {
+  <p>Sem itens.</p>
+}
+
+<p><strong>Total:</strong> {{ total() }}</p>
+<hr />

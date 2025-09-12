@@ -1,0 +1,20 @@
+<h2>Exercício 4</h2>
+
+<input placeholder="Novo item" [(ngModel)]="novo" />
+<button (click)="add()">Adicionar</button>
+
+<ul>
+  @for (it of itens; track $index; let i = $index) {
+    <li>
+      @if (!it.editando) {
+        {{ it.texto }}
+        <button (click)="editar(i)">editar</button>
+        <button (click)="remover(i)">remover</button>
+      } @else {
+        <input [(ngModel)]="it.texto" />
+        <button (click)="salvar(i)">salvar</button>
+      }
+    </li>
+  }
+</ul>
+<hr />

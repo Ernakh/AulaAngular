@@ -1,0 +1,20 @@
+<h2>Exercício 2 — Estoque</h2>
+
+<div>
+  <input placeholder="Nome" [(ngModel)]="novo.nome">
+  <input type="number" placeholder="Qtd" [(ngModel)]="novo.qtd">
+  <input type="number" placeholder="Preço" [(ngModel)]="novo.preco">
+  <button (click)="add()">Adicionar</button>
+</div>
+
+<ul>
+  @for (p of produtos; track $index) {
+  <li>
+    {{ p.nome }} — qtd: {{ p.qtd }} — preço: {{ p.preco }}
+    <button (click)="remover($index)">remover</button>
+  </li>
+  }
+</ul>
+
+<p><strong>Total do estoque:</strong> {{ getTotal()}}</p>
+<hr>
