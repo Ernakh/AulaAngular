@@ -12,9 +12,11 @@ import {ContadorA} from './contador-a/contador-a';
 import {ContadorB} from './contador-b/contador-b';
 import { InjecaoDependencia } from './injecao-dependencia/injecao-dependencia';
 import { InjecaoDependenciaProdutoCatalogo } from './injecao-dependencia-produto-catalogo/injecao-dependencia-produto-catalogo';
+import { Alunos } from './alunos/alunos';
 
 export const routes: Routes = [
   { path: 'exemplo1', component: Exemplo1},
+  {path: 'alunos', component: Alunos},
   { path: 'exercicio1', component: Exercicio1},
   { path: 'exercicio2', component: Exercicio2},
   { path: 'exercicio3', component: Exercicio3},
@@ -27,4 +29,5 @@ export const routes: Routes = [
   { path: 'injecaoproduto', component: InjecaoDependenciaProdutoCatalogo},
   { path: 'conta', component: ContadorA},
   { path: 'contb', component: ContadorB},
+
 ];
