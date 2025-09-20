@@ -1,0 +1,14 @@
+<div class="container py-3">
+  <h3 class="mb-3">Produtos</h3>
+
+  <ul class="list-group">
+    @for (p of produtos; track $index) {
+      <li class="list-group-item d-flex align-items-center">
+        <span class="badge text-bg-primary me-2">{{$index + 1}}</span>
+        {{ p }}
+      </li>
+    } @empty {
+      <li class="list-group-item text-muted">Nenhum produto encontrado.</li>
+    }
+  </ul>
+</div>

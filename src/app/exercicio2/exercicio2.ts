@@ -9,19 +9,30 @@ type Produto = { nome: string; qtd: number; preco: number };
   templateUrl: './exercicio2.html',
   styleUrl: './exercicio2.css'
 })
+
 export class Exercicio2 {
+
   produtos: Produto[] = [
     { nome: 'Caderno', qtd: 3, preco: 15 },
     { nome: 'Caneta', qtd: 10, preco: 3.5 }
   ];
+
+  // nomeP: string = '';
+  // quantidadeP: number = 1;
+  // valorP: number = 0;
 
   novo: Produto = { nome: '', qtd: 1, preco: 0 };
 
   add() {
     if (!this.novo.nome)
       return;
+
     this.produtos.push({ ...this.novo });
     this.novo = { nome: '', qtd: 1, preco: 0 };
+
+    // let prod:Produto = {nome: this.nomeP, Quantidade: this.quantidadeP, Valor: this.valorP };
+
+    // this.produtos.push(prod);
   }
 
   remover(i: number) {

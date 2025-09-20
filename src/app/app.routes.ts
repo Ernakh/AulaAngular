@@ -8,6 +8,10 @@ import { Exercicio4 } from './exercicio4/exercicio4';
 import { Exercicio5 } from './exercicio5/exercicio5';
 import { Exercicio6 } from './exercicio6/exercicio6';
 import { Exercicio7 } from './exercicio7/exercicio7';
+import {ContadorA} from './contador-a/contador-a';
+import {ContadorB} from './contador-b/contador-b';
+import { InjecaoDependencia } from './injecao-dependencia/injecao-dependencia';
+import { InjecaoDependenciaProdutoCatalogo } from './injecao-dependencia-produto-catalogo/injecao-dependencia-produto-catalogo';
 
 export const routes: Routes = [
   { path: 'exemplo1', component: Exemplo1},
@@ -19,4 +23,8 @@ export const routes: Routes = [
   { path: 'exercicio6', component: Exercicio6},
   { path: 'exercicio7', component: Exercicio7},
   { path: 'bootstrap', component: AulaBootStrap},
+  { path: 'injecao', component: InjecaoDependencia},
+  { path: 'injecaoproduto', component: InjecaoDependenciaProdutoCatalogo},
+  { path: 'conta', component: ContadorA},
+  { path: 'contb', component: ContadorB},
 ];
